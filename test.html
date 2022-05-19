@@ -1,33 +1,10 @@
-<?php
-
-include_once "koneksi.php";
-
-$kelas = show("SELECT * FROM tb_kelas");
-
-if(isset($_POST['register'])) {
-  $kosong = false;
-  foreach($_POST as $test) {
-    if($test === "") {
-      $kosong = true;
-    }
-  }
-
-  if(!$kosong) {
-    var_dump('GGBRO');
-    registrasi($_POST);
-    header("location: ./login.php");
-  }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+    <title>Login</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -89,25 +66,20 @@ if(isset($_POST['register'])) {
   </head>
   <body>
     <div class="container flex-column d-flex align-items-center justify-content-center">
-      
-      <?php if(isset($_POST['register'])) : ?>
-        <?php if($kosong) : ?>
-          <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Data tidak boleh Kosong</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-        <?php endif ; ?>
-      <?php endif ; ?>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
 
       <div class="card p-3 shadow">
         <a href="/">
           <i class="bx bx-x fs-2 text-dark"></i>
         </a>
         <div class="d-flex flex-column align-items-center bg-white">
-        <img src="img/logo/home-80.png" alt="" class="" />
-          <h2 class="fw-bold">Register</h2>
+          <img src="img/profile.png" alt="" class="" />
+          <h2 class="fw-bold">Login</h2>
 
-          <form method="POST" class="my-2 container-fluid">
+          <form action="" class="my-2 container-fluid">
             <!-- <div class="form-floating my-3 border border-dark rounded">
               <input
                 name="username"
@@ -126,11 +98,9 @@ if(isset($_POST['register'])) {
 
             <div class="form-floating my-3 border border-dark rounded">
               <select name="kelas" class="form-select" aria-label="Default select example">
-                <?php foreach ($kelas as $kls) : ?>
-                  <?php var_dump($kls) ?>
-                  <option value="<?=$kls["id_kelas"]?>"><?=$kls['kelas']?></option>
-                <?php endforeach ; ?>
-
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
               </select>
               <label for="floatingInput">kelas</label>
             </div>
@@ -147,7 +117,7 @@ if(isset($_POST['register'])) {
             </div>
 
             <div class="form-floating my-3 border border-dark rounded">
-              <select name="kelamin" class="form-select" aria-label="Default select example">
+              <select name="kelas" class="form-select" aria-label="Default select example">
                 <option value="LAKI-LAKI">LAKI-LAKI</option>
                 <option value="PEREMPUAN">PEREMPUAN</option>
               </select>
@@ -184,17 +154,6 @@ if(isset($_POST['register'])) {
 
             <div class="form-floating my-3 border border-dark rounded">
               <input
-                name="alamat"
-                type="text"
-                class="form-control"
-                id="floatingInput"
-                placeholder="name@example.com"
-              />
-              <label for="floatingInput">Alamat</label>
-            </div>
-
-            <div class="form-floating my-3 border border-dark rounded">
-              <input
                 name="namaortu"
                 type="text"
                 class="form-control"
@@ -206,7 +165,7 @@ if(isset($_POST['register'])) {
 
             <div class="form-floating my-3 border border-dark rounded">
               <input
-                name="nohp"
+                name="namaortu"
                 type="text"
                 class="form-control"
                 id="floatingInput"
@@ -225,11 +184,11 @@ if(isset($_POST['register'])) {
               />
               <label for="floatingPassword">Password</label>
             </div>
-            <input name="register" type="submit" value="Register" class="btn btn-primary form-floating container-fluid"></input>
+            <input name="register" type="submit" value="Register" class="btn btn-primary form-floating container-fluid">Register</input>
           </form>
 
           <p class="text-secondary">or</p>
-          <p class="text-center">Have an acoount <a href="login.php">Log in</a> here</p>
+          <p class="text-center">Doesnt have account ? <a href="">Log in</a> here</p>
         </div>
       </div>
     </div>

@@ -2,6 +2,8 @@
 @session_start();
 @ob_start();
 include "koneksi.php";
+
+//Check_Session
 if (@$_SESSION['admin']) {
     header("location:inde.php");
 } else  
@@ -19,154 +21,169 @@ if(isset($_POST['register'])){
     header("location: ./register.php");
 }
 
-{
+//Login
+
+if (@$_POST['login']) {
+  $username = $_POST['username'];
+  $pass = $_POST['pass'];
+
+  $fail = false;
+  $kosong = false;
+  if ($username === '' || $pass === '') {
+    $kosong = true;
+  } else {
+    $sql=mysqli_query($dtb, "SELECT * FROM tb_pengguna WHERE username = '$username' AND pass = '$pass'");
+      $data=mysqli_fetch_assoc($sql);
+      $cek=mysqli_num_rows($sql);
+      if ($cek >= 1) {
+          if ($data['status'] == "admin") {
+              $_SESSION['admin'] = $data['id_pengguna'];
+              header("location: inde.php");
+          } else if ($data['status'] == "tatausaha") {
+              $_SESSION['tatausaha'] = $data['id_pengguna'];
+              header("location: tatausaha/index.php");
+          } else if ($data['status'] == "guru") {
+              $_SESSION['guru'] = $data['id_pengguna'];
+              header("location: guru/index.php");
+          } else if ($data['status'] == "siswa") {
+              $_SESSION['siswa'] = $data['id_pengguna'];
+              header("location: ./siswa/index.php");
+          }
+        } else {
+          $fail = true;
+        }
+      }
+
+}
+
 ?>
+
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!-- Custom Fonts -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    <head>
+      .body {
+        background-color: #f2f2f2;
+        font-family: "Lato";
+      }
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
+      .container {
+        height: 100vh;
+      }
 
-        <title>SB Admin - Bootstrap Admin Template</title>
+      img {
+        width: 100px;
+      }
 
-        <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+      .card,
+      .alert {
+        width: 30vw;
+      }
 
-        <!-- Custom CSS -->
-        <link href="css/sb-admin.css" rel="stylesheet">
-        <link href="css/freelancer.css" rel="stylesheet">
+      @media only screen and (max-width: 600px) {
+        .body {
+          font-size: 12px;
+        }
 
-        <!-- Morris Charts CSS -->
-        <link href="css/plugins/morris.css" rel="stylesheet">
+        .card,
+        .alert {
+          width: 250px;
+        }
 
-        <!-- Custom Fonts -->
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        img {
+          width: 50px;
+        }
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        h2 {
+          font-size: 20px;
+        }
 
-    </head>
+        .form-floating {
+          margin: 3px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container flex-column d-flex align-items-center justify-content-center">
+     
+    <?php if(isset($_POST['login'])) : ?>
 
-    <body>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-lg-12 text-center">
+      <?php if($kosong) : ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>Data tidak boleh kosong</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <?php endif ; ?>
+
+      <?php if($fail) : ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>Login Gagal</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <?php endif ; ?>
+
+    <?php endif ; ?>
+
+      <div class="card p-3 shadow">
+        <a href="/">
+          <i class="bx bx-x fs-2 text-dark"></i>
+        </a>
+        <div class="d-flex flex-column align-items-center bg-white">
+          <img src="img/logo/home-80.png" alt="" class="" />
+          <h2 class="fw-bold">Login</h2>
+
+          <form class="my-2 container-fluid" method="POST">
+            <div class="form-floating my-3 border border-dark rounded">
+              <input name="username" type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <label for="floatingInput">Username</label>
             </div>
-            <div class="col-lg-12 text-center">
-                <div class="col-lg-12">
-                    <div id="page-wrapper">
-                        <div class="container-fluid">
-                            <div class="page-header">
-                                <h1>KONSELING BK</h1>
-                            </div>
+            <div class="form-floating my-3 border border-dark rounded">
+              <input
+                name="pass"
+                type="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
+            <input name="login" type="submit" class="btn btn-primary form-floating container-fluid" value="Login"></input>
+          </form>
 
-                            <div class="row">
-                                <div class="col-lg-12 text-center">
-                                </div>
-                                <div class="col-lg-12 text-center">
-                                    <div class="col-lg-12">
-                                        <h1 class="page-header">
-                                            LOGIN
-                                        </h1>
-                                    </div>
-
-                                    <form method="post">
-                                        <div class="row">
-                                            <div class="col-lg-4 text-center">
-                                            </div>
-                                            <div class="col-lg-4 text-center">
-                                                <div class="form-group">
-                                                    <label>Username</label>
-                                                    <input class="form-control" name="username" placeholder="Username">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 text-center">
-                                            </div>
-                                        </div>
-
-
-                                        <div class="row">
-                                            <div class="col-lg-4 text-center">
-                                            </div>
-                                            <div class="col-lg-4 text-center">
-                                                <div class="form-group">
-                                                    <label>Password</label>
-                                                    <input type="password" class="form-control" name="pass" placeholder="Password">
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-lg-8 text-right">
-                                    </div>
-                                    <div class="col-lg-8 text-right">
-                                        <input type="submit" name="login" class="btn btn-primary" value="Log In">
-                                        <input type="submit" name="register" class="btn btn-warning" value="Register">
-                                    </div>
-                                    </form>
-                                    <?php
-                                    if (@$_POST['login']) {
-                                        $username = $_POST['username'];
-                                        $pass = $_POST['pass'];
-                                        if ($username == '' || $pass == '') {
-                                    ?>
-                                            <script type="text/javascript">
-                                                alert("Username / Password Tidak Boleh Kosong")
-                                            </script>
-                                            <?php
-                                        } else {
-                                            $sql=mysqli_query($dtb, "SELECT * FROM tb_pengguna WHERE username = '$username' AND pass = '$pass'");
-                                            $data=mysqli_fetch_assoc($sql);
-                                            $cek=mysqli_num_rows($sql);
-                                            if ($cek >= 1) {
-                                                if ($data['status'] == "admin") {
-                                                    $_SESSION['admin'] = $data['id_pengguna'];
-                                                    header("location: inde.php");
-                                                } else if ($data['status'] == "tatausaha") {
-                                                    $_SESSION['tatausaha'] = $data['id_pengguna'];
-                                                    header("location: tatausaha/index.php");
-                                                } else if ($data['status'] == "guru") {
-                                                    $_SESSION['guru'] = $data['id_pengguna'];
-                                                    header("location: guru/index.php");
-                                                } else if ($data['status'] == "siswa") {
-                                                    $_SESSION['siswa'] = $data['id_pengguna'];
-                                                    header("location: ./siswa/index.php");
-                                                }
-                                            } else {
-                                            ?>
-                                                <script type="text/javascript">
-                                                    alert("Login Gagal")
-                                                </script>
-                                    <?php
-                                            }
-                                        }
-                                    }
-                                    ?>
-                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                        <div class="col-lg-4 text-left">
-                                        </div>
-                                        <div class="col-lg-4 text-left">
-                                            <ul class="nav navbar-nav navbar-left">
-                                                <li>
-                                                    <a href="index.php">BACK</a>
-                                                </li>
-                                            </ul>
-                                            <br>
-                                        <?php
-                                    }
-                                        ?>
+          <p class="text-secondary my-0">or</p>
+          <p class="text-center">Doesnt have account ? <a href="register.php">Register</a> here</p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
