@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>INTEREST BK</title>
+    <title>RUMAH BK</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -29,6 +29,28 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+        .logo {
+            display : flex;
+            align-items : center ;
+        }
+
+        #about {
+            display : flex !important;
+            align-items : center !important;
+            justify-content : center !important;
+        }
+
+        .portfolio-item {
+            flex-direction : column;
+            display : flex !important;
+            align-items : center !important;
+            justify-content : center !important;
+        }
+
+
+    </style>
+
 </head>
 
 
@@ -45,7 +67,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">INTEREST BK</a>
+                <div class="logo">
+                    <img src="img/logo/home-80.png" alt="" style="width : 40px;">
+                    <a class="navbar-brand" href="#page-top">RUMAH BK</a>
+                </div>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -71,13 +96,13 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header style="height: 100vh;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
+                    <img class="img-responsive" src="img/logo/home-240.png" alt="">
                     <div class="intro-text">
-                        <span class="name">SISTEM KONSELING SISWA</span>
+                        <span class="name">RUMAH Bimbingan Konseling</span>
                         <hr class="star-light">
                     </div>
                 </div>
@@ -86,7 +111,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" style="height: 100vh;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -94,11 +119,11 @@
                     <hr class="star-primary">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
+            <div class="row" style="margin: 20px 0;">
+                <div class="col-lg-6">
                     <p>Aplikasi ini dibuat untuk memudahkan kinerja dari guru guru BK atau bimbingan koseling untuk mengatur berkas dan kasus yang terjadi di sekolah </p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <p>Program ini mengandung tiga layanan atau fungsi utama yaitu Akses Profile, Akses absen, dan jadwal kelas. Selain itu, ada 4 pihak yang dapat menjalankan sistem ini yang terdiri dari pihak admin, pihak guru, pihak tata usaha dan siswa / murid</p>
                 </div>
             </div>
@@ -106,7 +131,7 @@
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section class="success" id="portfolio">
+    <section class="success" id="portfolio" style="height: 100vh;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -116,37 +141,40 @@
             </div>
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal" style="margin-left:60px;">
+                    <!-- <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal" style="margin-left:60px;">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/jadwal.png" class="img-responsive" alt="">
-                        <h3>Jadwal Kelas</h3>
-                    </a>
+                        
+                    </a> -->
+                    <img src="img/portfolio/jadwal.png" class="img-responsive" alt="">
+                    <h3>Jadwal Kelas</h3>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal" style="margin-left:60px;">
+                    <!-- <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal" style="margin-left:60px;">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/absensi.png" class="img-responsive" alt="">
-                        <h3 style="margin-left:33px;">Akses Profile</h3>
-                    </a>
+                        
+                    </a> -->
+                    <img src="img/portfolio/absensi.png" class="img-responsive" alt="">
+                        <h3>Akses Profile</h3>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal" style="margin-left:60px;">
+                    <!-- <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal" style="margin-left:60px;">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/rekap.png" class="img-responsive" alt="">
-                        <h3 style="margin-left:33px;">Akses Berkas</h3>
-                    </a>
+                        
+                    </a> -->
+                    <img src="img/portfolio/rekap.png" class="img-responsive" alt="">
+                    <h3 >Akses Berkas</h3>
                 </div>
             </div>
         </div>
@@ -189,7 +217,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-below">
+        <!-- <div class="footer-below">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -197,7 +225,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </footer>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
