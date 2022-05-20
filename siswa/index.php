@@ -94,7 +94,7 @@
 
                 </li>
                
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> &nbsp; SISWA <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
@@ -105,7 +105,7 @@
                             <a href="../logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
 
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
@@ -130,6 +130,9 @@
                             <a href="?page=lihatprofile2"><i class="fa fa-fw fa-hand-o-left"></i> Konsultasi BK</a>
                         </li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="../logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                     </li>
                     
             </div>
