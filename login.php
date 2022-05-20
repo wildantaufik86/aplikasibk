@@ -159,7 +159,7 @@ if (@$_POST['login']) {
 
           <form class="my-2 container-fluid" method="POST">
             <div class="form-floating my-3 border border-dark rounded">
-              <input name="username" type="number" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <input name="username" type="" class="form-control" id="floatingInput" placeholder="name@example.com" />
               <label for="floatingInput">Username</label>
             </div>
             <div class="form-floating my-3 border border-dark rounded">
