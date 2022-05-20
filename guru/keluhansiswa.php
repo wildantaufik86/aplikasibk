@@ -1,25 +1,26 @@
 <div class="row">
-    <div class="col-lg-12" style="margin-top:+70px;">
-        <h1 class="page-header">
+    <div class="col-lg-12" style="padding:0;">
+        <!-- <h1 class="page-header">
             Halaman
-            <small>Siswa</small>
-        </h1>
+            <small>Guru</small>
+        </h1> -->
         <ol class="breadcrumb">
             <li>
-                <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
+                <i class="fa fa-dashboard"></i>  <a href="inde.php">Dashboard</a>
             </li>
             <li class="active">
-                <i class="fa fa-user"></i> Siswa
+                <i class="fa fa-child"></i> keluhan
             </li>
         </ol>
     </div>
 </div>
 
+
 <!-- ISI -->
-<div class="row">
+<div class="row" >
     <div class="col-lg-12">
-        <h3 class="page-header" style="margin-top:-5px;">
-            Report Keluhan Siswa
+        <h3 class="page-header" style="margin:0;">
+            Keluhan Siswa
         </h3>
     </div>
 </div>

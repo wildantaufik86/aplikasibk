@@ -7,11 +7,11 @@
 ?>
 
 <div class="row">
-    <div class="col-lg-12" style="margin-top:-10px;">
-        <h1 class="page-header">
+    <div class="col-lg-12" style="padding:0;">
+        <!-- <h1 class="page-header">
             Halaman
             <small>Lihat Jadwal</small>
-        </h1>
+        </h1> -->
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i>  <a href="../guru/index.php">Dashboard</a>

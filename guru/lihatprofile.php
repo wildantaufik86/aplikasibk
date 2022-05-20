@@ -1,9 +1,9 @@
 <div class="row">
-    <div class="col-lg-12" style="margin-top:+70px;">
-        <h1 class="page-header">
+    <div class="col-lg-12" style="padding:0;">
+        <!-- <h1 class="page-header">
             Halaman
             <small>Guru</small>
-        </h1>
+        </h1> -->
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i>  <a href="inde.php">Dashboard</a>
@@ -16,11 +16,12 @@
 </div>
 
 <!-- ISI -->
-<div class="row">
-    <div class="col-lg-12">
-        <h3 class="page-header" style="margin-top:-5px;">
+<div class="row" >
+    <div class="col-lg-12" id="header" style="display : flex; align-items : center; justify-content: space-between;">
+        <h3 class="page-header" style="margin:0;">
             Report Data Guru
         </h3>
+        <i style="font-size : 16px ; margin: 0 10px;"><a href="inde.php?page=inputguru">Data Baru Guru</a></i>
     </div>
 </div>
 
@@ -30,7 +31,7 @@
         <?php   
             $result = mysqli_query($dtb, "SELECT * FROM tb_guru ORDER BY nip ASC");  
         ?>
-        <i><a href="inde.php?page=inputguru">Data Baru Guru</a></i><br><br>
+        
         <div class="table-responsive">
              <table class="table table-hover table-bordered table-striped">
                 <thead>

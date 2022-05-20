@@ -40,6 +40,16 @@
         .table td {
            text-align: center;   
         }
+
+        #navbar, #sidebar {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .navbar-right {
+                display: none;
+            }
+        }
     </style>
 
 </head>
@@ -102,7 +112,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="../guru/index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="../siswa/index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="?page=lihatprofile"><i class="fa fa-fw fa-user"></i>Profile</a>

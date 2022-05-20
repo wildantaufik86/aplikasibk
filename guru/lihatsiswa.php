@@ -1,9 +1,9 @@
 <div class="row">
-    <div class="col-lg-12" style="margin-top:+70px;">
-        <h1 class="page-header">
+    <div class="col-lg-12" style="padding:0;">
+       <!--  <h1 class="page-header">
             Halaman
             <small>Siswa</small>
-        </h1>
+        </h1> -->
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i>  <a href="inde.php">Dashboard</a>
@@ -16,9 +16,9 @@
 </div>
 
 <!-- ISI -->
-<div class="row">
+<div class="row" style="margin: 10px 0;">
     <div class="col-lg-12">
-        <h3 class="page-header" style="margin-top:-5px;">
+        <h3 class="page-header" style="margin: 0;">
             Report Data Siswa
         </h3>
     </div>
@@ -29,7 +29,7 @@
        <?php
         $kelas1 = mysqli_query($dtb, "SELECT* FROM tb_kelas");
         ?>
-        <ul class="nav nav-tabs table-responsive" id="myTab" style="margin-bottom:10px;">
+        <ul class="nav nav-tabs table-responsive" id="myTab" style=" overflow: hidden;">
             <?php
                 while($row1=mysqli_fetch_array($kelas1)){
             ?>

@@ -70,7 +70,7 @@ if(isset($_POST['register'])) {
 
         .card,
         .alert {
-          width: 250px;
+          width: 80vw;
         }
 
         img {
@@ -100,7 +100,7 @@ if(isset($_POST['register'])) {
       <?php endif ; ?>
 
       <div class="card p-3 shadow">
-        <a href="/">
+        <a href="index.php">
           <i class="bx bx-x fs-2 text-dark"></i>
         </a>
         <div class="d-flex flex-column align-items-center bg-white">
