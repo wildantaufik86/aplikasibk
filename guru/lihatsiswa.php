@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-lg-12" style="padding:0;">
+    <div class="col-lg-12" style="margin-top: 0;">
        <!--  <h1 class="page-header">
             Halaman
             <small>Siswa</small>
@@ -19,7 +19,7 @@
 <div class="row" style="margin: 10px 0;">
     <div class="col-lg-12">
         <h3 class="page-header" style="margin: 0;">
-            Report Data Siswa
+            List Data Siswa
         </h3>
     </div>
 </div>

@@ -149,7 +149,7 @@ if (@$_POST['login']) {
 
     <?php endif ; ?>
 
-      <div class="card p-3 shadow">
+      <div class="card p-1 shadow">
         <a href="index.php">
           <i class="bx bx-x fs-2 text-dark"></i>
         </a>
@@ -159,7 +159,7 @@ if (@$_POST['login']) {
 
           <form class="my-2 container-fluid" method="POST">
             <div class="form-floating my-3 border border-dark rounded">
-              <input name="username" type="text" class="form-control" id="floatingInput" placeholder="name@example.com" />
+              <input name="username" type="number" class="form-control" id="floatingInput" placeholder="name@example.com" />
               <label for="floatingInput">Username</label>
             </div>
             <div class="form-floating my-3 border border-dark rounded">

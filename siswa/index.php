@@ -64,7 +64,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../guru/index.php">SB SISWA</a>
+                <a class="navbar-brand" href="../guru/index.php">AKUN SISWA</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -118,13 +118,13 @@
                         <a href="?page=lihatprofile"><i class="fa fa-fw fa-user"></i>Profile</a>
                     </li>
                     <li>
-                        <a href="javasript:;" data-toggle="collapse" data-target="#layananbk" ><i class="fa fa-fw fa-bookmark"></i> Layanan BK <i class="fa fa-fw fa-caret-down"></i> </a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#layananbk" ><i class="fa fa-fw fa-bookmark"></i> Layanan BK <i class="fa fa-fw fa-caret-down"></i> </a>
                         <ul id="layananbk" class="collapse">
                         <li>
                             <a href="?page=informasibk"><i class="fa fa-fw fa-hand-o-left"></i> Lihat Informasi BK</a>
                         </li>
                         <li>
-                            <a href="?page=lihatjadwalkonseling"><i class="fa fa-fw fa-hand-o-left"></i> Lihat Jadwal Konseling</a>
+                            <a href="#"><i class="fa fa-fw fa-hand-o-left"></i> Lihat Keluhan dan Solusi</a>
                         </li>
                         <li>
                             <a href="?page=lihatprofile2"><i class="fa fa-fw fa-hand-o-left"></i> Konsultasi BK</a>

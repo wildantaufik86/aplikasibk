@@ -12,10 +12,7 @@
                 <i class="fa fa-bookmark"></i> Konseling
             </li>
             <li class="active">
-                <i class="fa fa-bookmark"></i> Lihat Keluhan Siswa
-            </li>
-            <li class="active">
-                <i class="fa fa-bookmark"></i> Keluhan Siswa
+                <i class="fa fa-bookmark"></i> Cek Keluhan Siswa
             </li>
         </ol>
     </div>

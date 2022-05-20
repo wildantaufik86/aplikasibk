@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-lg-12" style="padding:0;">
+    <div class="col-lg-12" style="margin-top: 0;">
         <!-- <h1 class="page-header">
             Halaman
             <small>Guru</small>
@@ -21,7 +21,6 @@
         <h3 class="page-header" style="margin:0;">
             Report Data Guru
         </h3>
-        <i style="font-size : 16px ; margin: 0 10px;"><a href="inde.php?page=inputguru">Data Baru Guru</a></i>
     </div>
 </div>
 
@@ -56,7 +55,7 @@
                         <td><?php echo $raw['tanggal_lahir']; ?></td>
                         <td><?php echo $raw['alamat']; ?></td>
                         <td><?php echo $raw['agama']; ?></td>
-                        <td><i><a href="?page=editprofile&id=<?php echo $raw['id_guru'];?>">Edit</a> / <a onclick="return confirm('Yakin akan hapus data ini ?')" href="../guru_hapus.php?id=<?php echo $raw['id_guru'];?>">Hapus</a></i></td>
+                        <td><i><a href="?page=editprofile&id=<?php echo $raw['id_guru'];?>">Edit</a></i></td>
                     </tr>
                     <?php
                         }

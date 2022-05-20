@@ -96,24 +96,24 @@
 
                 </li>
                
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> &nbsp; Guru <b class="caret"></b></a>
+                <!-- <li class="dropdown">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> &nbsp; Guru <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="?page=lihatprofile2"><i class="fa fa-fw fa-user"></i> Profile</a>
                         </li>
-                            <!-- <li>
+                            <li>
                                 <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                            </li> -->
+                            </li>
                         <li class="divider"></li>
                         <li>
                             <a href="../logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
 
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
@@ -121,6 +121,9 @@
                 <ul class="nav navbar-nav side-nav" id="sidebar">
                     <li>
                         <a href="../guru/index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="?page=lihatprofile2"><i class="fa fa-fw fa-user"></i> Profile</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#siswa"><i class="fa fa-fw fa-child"></i> Siswa <i class="fa fa-fw fa-caret-down"></i></a>
@@ -144,12 +147,12 @@
                             <li>
                                 <a href="?page=keluhansiswa"><i class="fa fa-fw fa-spinner"></i> Lihat Keluhan Siswa</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="?page=inputjadwalkonseling"><i class="fa fa-fw fa-book"></i> Input Jadwal Konseling</a>
                             </li>
                             <li>
                                 <a href="?page=jadwalkonseling"><i class="fa fa-fw fa-calendar"></i> Lihat Jadwal Konseling</a>
-                            </li>
+                            </li> -->
                             
                         </ul>
                     </li>
