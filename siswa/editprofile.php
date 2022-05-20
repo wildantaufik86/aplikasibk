@@ -113,10 +113,16 @@
         $nama_ortu=strtoupper($_POST['nama_ortu']);
         $no_ortu=strtoupper($_POST['no_ortu']);
         $kelas=strtoupper($_POST['kelas']);
+        $prestasi1=strtoupper($_POST['prestasi_1']);
+        $prestasi2=strtoupper($_POST['prestasi_2']);
+        $prestasi3=strtoupper($_POST['prestasi_3']);
+        $prestasi4=strtoupper($_POST['prestasi_4']);
+        $prestasi5=strtoupper($_POST['prestasi_5']);
         
         $query=mysqli_query($dtb, "UPDATE tb_siswa SET nama_siswa='$nama_siswa', jenis_kelamin='$jenis_kelamin',
                             tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir', alamat='$alamat', agama='$agama',
-                            nama_ortu='$nama_ortu', no_ortu='$no_ortu', id_kelas='$kelas' WHERE id_siswa='$id'");
+                            nama_ortu='$nama_ortu', no_ortu='$no_ortu' ,prestasi_1='$prestasi1', prestasi_2='$prestasi2', prestasi_3='$prestasi3',
+                            prestasi_4='$prestasi4', prestasi_5='$prestasi5', id_kelas='$kelas' WHERE id_siswa='$id'");
         
         if($query){
         ?>
