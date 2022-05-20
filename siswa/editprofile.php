@@ -92,32 +92,12 @@
                 ?>
                 </select>
             </div>
-            <div class="form-group">
-                <label>Prestasi Siswa 1</label>
-                <input class="form-control" name="prestasi_1" value="<?php echo $data->prestasi_1;?>">
-            </div>
-            <div class="form-group">
-                <label>Prestasi Siswa 2</label>
-                <input class="form-control" name="prestasi_2" value="<?php echo $data->prestasi_2;?>">
-            </div>
-            <div class="form-group">
-                <label>Prestasi Siswa 3</label>
-                <input class="form-control" name="prestasi_3" value="<?php echo $data->prestasi_3;?>">
-            </div>
-            <div class="form-group">
-                <label>Prestasi Siswa 4</label>
-                <input class="form-control" name="prestasi_4" value="<?php echo $data->prestasi_4;?>">
-            </div>
-            <div class="form-group">
-                <label>Prestasi Siswa 5</label>
-                <input class="form-control" name="prestasi_5" value="<?php echo $data->prestasi_5;?>">
-            </div>
         </div>
 </div>
 
 <div class="row">
     <div class="col-lg-6">
-        <input type="submit" name="edit" class="btn btn-default" value="Edit"/>
+        <input style="margin-bottom: 50px;" type="submit" name="edit" class="btn btn-default" value="Simpan Edit Profile"/>
     </div>
     </form>
 
