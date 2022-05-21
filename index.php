@@ -48,6 +48,34 @@
             justify-content : center !important;
         }
 
+        @media only screen and (max-width: 600px) {
+        .img-responsive {
+            width : 120px ;
+        }
+
+        h2 {
+            font-size : 24px !important;
+        }
+
+        .deskripsi {
+            text-align : center;
+            margin : 20px 0;
+        }
+
+        header{
+            display : flex;
+            align-items : center;
+        }
+
+        .logo {
+            padding : 0 10px;
+        }
+
+        p {
+            font-size : 15px;
+        }
+      }
+
 
     </style>
 
@@ -121,10 +149,10 @@
             </div>
             <div class="row" style="margin: 20px 0;">
                 <div class="col-lg-6">
-                    <p>Aplikasi ini dibuat untuk memudahkan kinerja dari guru guru BK atau bimbingan koseling untuk mengatur berkas dan kasus yang terjadi di sekolah </p>
+                    <p class="deskripsi">Aplikasi ini dibuat untuk memudahkan kinerja dari guru guru BK atau bimbingan koseling untuk mengatur berkas dan kasus yang terjadi di sekolah </p>
                 </div>
                 <div class="col-lg-6">
-                    <p>Program ini mengandung tiga layanan atau fungsi utama yaitu Akses Profile, Akses absen, dan jadwal kelas. Selain itu, ada 4 pihak yang dapat menjalankan sistem ini yang terdiri dari pihak admin, pihak guru, pihak tata usaha dan siswa / murid</p>
+                    <p class="deskripsi">Program ini mengandung tiga layanan atau fungsi utama yaitu Akses Profile, Akses absen, dan jadwal kelas. Selain itu, ada 4 pihak yang dapat menjalankan sistem ini yang terdiri dari pihak admin, pihak guru, pihak tata usaha dan siswa / murid</p>
                 </div>
             </div>
         </div>
