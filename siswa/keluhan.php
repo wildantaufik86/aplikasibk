@@ -1,9 +1,6 @@
 <div class="row">
-    <div class="col-lg-12" style="margin-top:+70px;">
-        <h1 class="page-header">
-            Halaman
-            <small>Siswa</small>
-        </h1>
+    <div class="col-lg-12" style="margin-top:0px;">
+
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
@@ -18,18 +15,16 @@
 <!-- ISI -->
 <div class="row">
     <div class="col-lg-12">
-        <h3 class="page-header" style="margin-top:-5px;">
-            Report Profile Siswa
+        <h3 class="page-header" style="margin-top:0px;">
+            Report Permasalahan Siswa
         </h3>
     </div>
 </div>
 
 <div class="row">
     <div class="col-lg-12">
-        <div class="tab-content table-responsive">
             <?php
-                    $siswa=mysqli_query($dtb, "SELECT tb_pengguna.username,
-                                                      tb_konsultasi.id_siswa, 
+                    $siswa=mysqli_query($dtb, "SELECT tb_pengguna.username, 
                                                       tb_siswa.nama_siswa,
                                                       tb_siswa.id_siswa,
                                                       tb_siswa.nis,
@@ -41,37 +36,32 @@
                                                       tb_siswa.nama_ortu,
                                                       tb_siswa.no_ortu
 
-                                    FROM tb_pengguna, tb_siswa, tb_konsultasi
+                                    FROM tb_pengguna, tb_siswa
                                     WHERE tb_pengguna.id_pengguna='$id_login' AND tb_pengguna.username=tb_siswa.nis");
                     $jumlah=mysqli_num_rows($siswa);
             ?>
-            <div class="tab-pane active" id="">
-                <br>
-                <div class="table-responsive">
-                     <table class="table table-hover table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th>NIS</th>
-                                <th>Nama</th>
-                                <th>CEK BERKAS</th>
-                            </tr>
-                        </thead>
                         <tbody>
                             <?php
                                 while($row3=mysqli_fetch_array($siswa)){
                             ?>
-                            <tr>
-                                <td><?php echo $row3['nis']; ?></td>
-                                <td><?php echo $row3['nama_siswa']; ?></td>
-                                <td><i><a href="?page=cekkeluhan&id=<?php echo $row3['id_siswa'];?>">Cek Keluhan</a></i></td>
-                            </tr>
+
+                            <div class="form-group">
+                                <label>NIS</label>
+                                <input class="form-control" value="<?php echo $row3['nis']; ?>" readonly="readonly">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nama</label>
+                                <input class="form-control" value="<?php echo $row3['nama_siswa']; ?>" readonly="readonly">
+                            </div>
+
+                            <form action="?page=cekkeluhan&id=<?php echo $row3['id_siswa'];?>" method="Post">
+                                <div class="form-group">
+                                <input style="margin-bottom: 50px; margin-top:20px; width:100%;" class="btn btn-primary" type="submit" value="Lihat Keluhan dan Solusi" name="Edit Profile">
+                            </form> 
                             <?php
                                 }
                             ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
         </div>
     </div>
 </div>

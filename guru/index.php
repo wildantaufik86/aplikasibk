@@ -148,7 +148,7 @@
                                 <a href="?page=keluhansiswa"><i class="fa fa-fw fa-user"></i> Lihat Keluhan Siswa</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-fw fa-book"></i> Input Solusi</a>
+                                <a href="?page=inputsolusi"><i class="fa fa-fw fa-book"></i> Input Solusi</a>
                             </li>
                         </ul>
                     </li>
@@ -201,6 +201,10 @@
                 include"inputjadwal2.php";
                 } else if(@$_GET['page']=='inputjadwalkonseling2'){
                 include"jadwalkonseling2.php";
+                } else if(@$_GET['page']=='inputsolusi'){
+                include"inputsolusi.php";
+                } else if(@$_GET['page']=='inputsolusi2'){
+                include"inputsolusi2.php";
                 }
                  
                 ?>

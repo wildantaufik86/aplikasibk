@@ -81,23 +81,6 @@
                     <?php
                         }
                     ?>
-        <div class="table-responsive">
-             <table class="table table-hover table-bordered table-striped">
-                <thead>
-                    <!-- <tr>
-                        <th>NIP</th>
-                        <th>Nama</th>
-                        <th>Kode Guru</th>
-                        <th>Tanggal Lahir</th>
-                        <th>Alamat</th>
-                        <th>Agama</th>
-                        <th>Action</th>
-                    </tr> -->
-                </thead>
-                <tbody>
-                   
-                </tbody>
-            </table>
         </div>
     </div>
 </div>

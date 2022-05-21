@@ -72,7 +72,7 @@
                                 <td><?php echo $row3['tanggal']; ?></td>
                                 <td><?php echo $row3['nama_siswa']; ?></td>
                                 <td><?php echo $row3['nis']; ?></td>
-                                <td><b><a style="color: red;" href="?page=cekkeluhan&id=<?php echo $row3['id_konsultasi'];?>">CEK KELUHAN</a></b></td>
+                                <td><b><a style="color: green;" href="?page=inputsolusi2&id=<?php echo $row3['id_konsultasi'];?>">INPUT SOLUSI</a></b></td>
                                 <!-- <td>/td> -->
                             </tr>
                             <?php

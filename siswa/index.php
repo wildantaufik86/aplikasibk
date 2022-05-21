@@ -170,6 +170,8 @@
                 include"keluhan.php";
                 } else if(@$_GET['page']=='cekkeluhan'){
                 include"cekkeluhan.php";
+                } else if(@$_GET['page']=='cekkeluhan2'){
+                include"cekkeluhan2.php";
                 }
                 ?>
 

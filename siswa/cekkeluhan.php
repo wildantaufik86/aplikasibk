@@ -1,25 +1,26 @@
 <div class="row">
-    <div class="col-lg-12" style="margin-top:+70px;">
-        
+    <div class="col-lg-12" style="padding:0;">
+        <!-- <h1 class="page-header">
+            Halaman
+            <small>Guru</small>
+        </h1> -->
         <ol class="breadcrumb">
             <li>
-                <i class="fa fa-dashboard"></i><a href="index.php"> Dashboard</a>
+                <i class="fa fa-dashboard"></i>  <a href="inde.php">Dashboard</a>
             </li>
             <li class="active">
-                <i class="fa fa-bookmark"></i> Konseling
-            </li>
-            <li class="active">
-                <i class="fa fa-bookmark"></i> Cek Keluhan Siswa
+                <i class="fa fa-child"></i> keluhan
             </li>
         </ol>
     </div>
 </div>
 
+
 <!-- ISI -->
-<div class="row">
+<div class="row" >
     <div class="col-lg-12">
-        <h3 class="page-header" style="margin-top:-5px;">
-            Report Profile Siswa
+        <h3 class="page-header" style="margin:0;">
+            Keluhan Siswa
         </h3>
     </div>
 </div>
@@ -30,7 +31,7 @@
         <?php       
                     $id = $_GET['id'];
                     
-                    $berkas = mysqli_query($dtb, "SELECT * FROM tb_konsultasi WHERE id_konsultasi='$id'");
+                    $berkas = mysqli_query($dtb, "SELECT * FROM tb_konsultasi WHERE id_siswa='$id' ");
                     $no=1;
                     $siswa=mysqli_query($dtb, "SELECT tb_pengguna.username,
                                                       tb_konsultasi.tanggal,
@@ -52,10 +53,11 @@
                      <table class="table table-hover table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Judul Keluhan</th>
-                                <th>Keluhan</th>
-                                <th>Solusi</th>
-                                <!-- <th>Cek Keluhan</th> -->
+                                <th>NO</th>
+                                <th>Tanggal Keluhan</th>
+                                <th>Nama Siswa</th>
+                                <th>NIS</th>
+                                <th>Menu</th>
                                 <!-- <th>Judul Keluhan</th>
                                 <th>Keluhan</th> -->
                                 <!-- <th>NIS</th> -->
@@ -66,9 +68,11 @@
                                 while($row3=mysqli_fetch_array($berkas)){
                             ?>
                             <tr>
-                                <td><?php echo $row3['judul_keluhan']; ?></td>
-                                <td><textarea name="" id="" cols="30" rows="10"><?php echo $row3['keluhan']; ?></textarea></td>
-                                <td></td>
+                                <td><?php echo $no++; ?></td>
+                                <td><?php echo $row3['tanggal']; ?></td>
+                                <td><?php echo $row3['nama_siswa']; ?></td>
+                                <td><?php echo $row3['nis']; ?></td>
+                                <td><b><a style="color: green;" href="?page=cekkeluhan2&id=<?php echo $row3['id_konsultasi'];?>">CEK KELUHAN</a></b></td>
                                 <!-- <td>/td> -->
                             </tr>
                             <?php

@@ -55,12 +55,12 @@
         </div>
         <div class="col-lg-6">
             <div class="form-group">
-                <label>Judul Keluhan</label>
+                <label>Judul Permasalahan</label>
                 <input class="form-control" name="judul" value="" placeholder="Masukan Judul Keluhan" required>
             </div>
             <div class="form-group">
-                <label>Input Keluhan</label>
-                <textarea style="border-radius:10px;" name="keluhan" id="" cols="42" rows="5" required>
+                <label>Input Permasalahan</label>
+                <textarea style="border-radius:10px; width:100%;" name="keluhan" id="" cols="42" rows="5" required>
                 </textarea>
                 <!-- <label>Input Keluhan</label>
                 <input class="form-control" name="agama" value="" placeholder="Masukan Keluhan Anda" required> -->
