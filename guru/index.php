@@ -145,15 +145,11 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#konseling"><i class="fa fa-fw fa-bookmark"></i> Konseling <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="konseling" class="collapse">
                             <li>
-                                <a href="?page=keluhansiswa"><i class="fa fa-fw fa-spinner"></i> Lihat Keluhan Siswa</a>
-                            </li>
-                            <!-- <li>
-                                <a href="?page=inputjadwalkonseling"><i class="fa fa-fw fa-book"></i> Input Jadwal Konseling</a>
+                                <a href="?page=keluhansiswa"><i class="fa fa-fw fa-user"></i> Lihat Keluhan Siswa</a>
                             </li>
                             <li>
-                                <a href="?page=jadwalkonseling"><i class="fa fa-fw fa-calendar"></i> Lihat Jadwal Konseling</a>
-                            </li> -->
-                            
+                                <a href="#"><i class="fa fa-fw fa-book"></i> Input Solusi</a>
+                            </li>
                         </ul>
                     </li>
                     <li>

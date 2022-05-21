@@ -92,12 +92,16 @@
                 ?>
                 </select>
             </div>
+
+            <div class="form-group">
+                <p style="color: red;"><i>*Pastikan data yang anda edit telah benar</i></p>
+            </div>
         </div>
 </div>
 
 <div class="row">
     <div class="col-lg-6">
-        <input style="margin-bottom: 50px;" type="submit" name="edit" class="btn btn-default" value="Simpan Edit Profile"/>
+        <input style="margin-bottom: 50px; margin-top:5px; width:100%;" type="submit" name="edit" class="btn btn-danger" value="SIMPAN EDIT PROFILE"/>
     </div>
     </form>
 

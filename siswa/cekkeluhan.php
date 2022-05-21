@@ -1,5 +1,6 @@
 <div class="row">
-    <div class="col-lg-12" style="margin-top:0px;">
+    <div class="col-lg-12" style="margin-top:+70px;">
+        
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i><a href="index.php"> Dashboard</a>
@@ -33,7 +34,6 @@
                     $no=1;
                     $siswa=mysqli_query($dtb, "SELECT tb_pengguna.username,
                                                       tb_konsultasi.tanggal,
-                                                      tb_konsultasi.solusi,
                                                       tb_konsultasi.nama_siswa,
                                                       tb_konsultasi.judul_keluhan,
                                                       tb_konsultasi.keluhan,
@@ -54,7 +54,7 @@
                             <tr>
                                 <th>Judul Keluhan</th>
                                 <th>Keluhan</th>
-                                <th>SOLUSI</th>
+                                <th>Solusi</th>
                                 <!-- <th>Cek Keluhan</th> -->
                                 <!-- <th>Judul Keluhan</th>
                                 <th>Keluhan</th> -->
@@ -68,7 +68,9 @@
                             <tr>
                                 <td><?php echo $row3['judul_keluhan']; ?></td>
                                 <td><textarea name="" id="" cols="30" rows="10"><?php echo $row3['keluhan']; ?></textarea></td>
-                                <td><textarea rows="10" cols="30"><?php echo $row3['solusi']; ?></textarea></td>
+                                <td></td>
+                                <!-- <td>/td> -->
+                            </tr>
                             <?php
                                 }
                             ?>

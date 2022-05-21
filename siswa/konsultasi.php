@@ -19,7 +19,7 @@
 <div class="row">
     <div class="col-lg-12">
         <h3 class="page-header" style="margin: 0;">
-            Edit Data Siswa
+            Permasalahan Siswa
         </h3>
     </div>
 </div>
@@ -60,7 +60,7 @@
             </div>
             <div class="form-group">
                 <label>Input Keluhan</label>
-                <textarea name="keluhan" id="" cols="40" rows="5" required>
+                <textarea style="border-radius:10px;" name="keluhan" id="" cols="42" rows="5" required>
                 </textarea>
                 <!-- <label>Input Keluhan</label>
                 <input class="form-control" name="agama" value="" placeholder="Masukan Keluhan Anda" required> -->
@@ -76,7 +76,7 @@
 
 <div class="row">
     <div class="col-lg-6">
-        <input style="margin-bottom: 30px;" type="submit" name="send" class="btn btn-default" value="Kirim Data konsultasi"/>
+        <input style="margin-bottom: 30px;" type="submit" name="send" class="btn btn-success" value="KIRIM DATA PERMASALAHAN"/>
     </div>
     </form>
 
@@ -89,7 +89,7 @@
         $judul=strtoupper($_POST['judul']);
         $keluhan=strtoupper($_POST['keluhan']);
         $id = $_GET['id'];
-        $query=mysqli_query($dtb, "INSERT INTO tb_konsultasi VALUES ('', '$nis', '$nama', '$tanggal', '$judul', '$keluhan', '$id')");
+        $query=mysqli_query($dtb, "INSERT INTO tb_konsultasi VALUES ('', '$nis', '$nama', '$tanggal', '$judul', '$keluhan', '', '$id')");
         
         if($query){
         ?>

@@ -90,7 +90,7 @@
 
                 <form action="?page=editprofile&id=<?php echo $raw['id_siswa'];?>" method="post">
                 <div class="form-group">
-                    <input style="margin-bottom: 50px;" class="form-control" type="submit" value="Edit Profile" name="Edit Profile">
+                    <input style="margin-bottom: 50px; margin-top: 5px; width:100%;" class="btn btn-primary" type="submit" value="EDIT PROFILE" name="Edit Profile">
                 </form>
                     <?php
                         }

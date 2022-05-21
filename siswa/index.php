@@ -91,7 +91,6 @@
                     <a> 
                     Pukul <span id="jam"></span>
                     </a>
-
                 </li>
                
                 <!-- <li class="dropdown">
@@ -121,10 +120,7 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#layananbk" ><i class="fa fa-fw fa-bookmark"></i> Layanan BK <i class="fa fa-fw fa-caret-down"></i> </a>
                         <ul id="layananbk" class="collapse">
                         <li>
-                            <a href="?page=informasibk"><i class="fa fa-fw fa-hand-o-left"></i> Lihat Informasi BK</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-hand-o-left"></i> Lihat Keluhan dan Solusi</a>
+                            <a href="?page=lihatkeluhan"><i class="fa fa-fw fa-hand-o-left"></i> Lihat Keluhan dan Solusi</a>
                         </li>
                         <li>
                             <a href="?page=lihatprofile2"><i class="fa fa-fw fa-hand-o-left"></i> Konsultasi BK</a>
@@ -170,6 +166,10 @@
                 include"lihatjadwalkonseling.php";
                 } else if(@$_GET['page']=='lihatprofile2'){
                 include"lihatprofile2.php";
+                } else if(@$_GET['page']=='lihatkeluhan'){
+                include"keluhan.php";
+                } else if(@$_GET['page']=='cekkeluhan'){
+                include"cekkeluhan.php";
                 }
                 ?>
 

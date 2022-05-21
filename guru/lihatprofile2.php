@@ -76,7 +76,7 @@
                 </div>
                 <form action="?page=editprofile&id=<?php echo $raw['id_guru'];?>" method="post">
                 <div class="form-group">
-                    <input class="form-control" type="submit" value="Edit Profile" name="Edit Profile">
+                    <input style="width: 100%; margin-top:10px;" class="btn btn-primary" type="submit" value="Edit Profile" name="Edit Profile">
                 </form>
                     <?php
                         }
