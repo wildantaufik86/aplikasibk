@@ -51,9 +51,9 @@
         // Masukkan data ke dalam database
           $query = "INSERT INTO tb_pengguna VALUES ('', '$nis', '$password', 'siswa')";
           $query2 = "INSERT INTO tb_siswa VALUES ('', '$nis', '$namasiswa', '$kelamin', '$tempatlahir', '$tanggallahir', '$alamat', '$agama', '$namaortu', '$nohp', '$kelas')";
-        mysqli_query($dtb, $query);
-        mysqli_query($dtb, $query2);
-        return mysqli_affected_rows($dtb);
+          mysqli_query($dtb, $query);
+          mysqli_query($dtb, $query2);
+          return mysqli_affected_rows($dtb);
         }
 
 ?>

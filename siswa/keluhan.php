@@ -1,15 +1,12 @@
 <div class="row">
-    <div class="col-lg-12" style="padding: 0;">
-        <!-- <h1 class="page-header">
-            Halaman
-            <small>Siswa</small>
-        </h1> -->
+    <div class="col-lg-12" style="margin-top:0px;">
+
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
             </li>
             <li class="active">
-                <i class="fa fa-user"></i> konsultasi
+                <i class="fa fa-user"></i> Siswa
             </li>
         </ol>
     </div>
@@ -18,8 +15,8 @@
 <!-- ISI -->
 <div class="row">
     <div class="col-lg-12">
-        <h3 class="page-header" style="margin: 0;">
-            Report Profile Siswa
+        <h3 class="page-header" style="margin-top:0px;">
+            Report Permasalahan Siswa
         </h3>
     </div>
 </div>
@@ -55,12 +52,12 @@
 
                             <div class="form-group">
                                 <label>Nama</label>
-                                <input class="form-control" value="<?php echo $row3['nis']; ?>" readonly="readonly">
+                                <input class="form-control" value="<?php echo $row3['nama_siswa']; ?>" readonly="readonly">
                             </div>
 
-                            <form action="?page=konsultasi&id=<?php echo $row3['id_siswa'];?>" method="Post">
+                            <form action="?page=cekkeluhan&id=<?php echo $row3['id_siswa'];?>" method="Post">
                                 <div class="form-group">
-                                <input style="margin-bottom: 50px; margin-top:20px; width:100%;" class="btn btn-primary" type="submit" value="INPUT KELUHAN" name="Edit Profile">
+                                <input style="margin-bottom: 50px; margin-top:20px; width:100%;" class="btn btn-primary" type="submit" value="Lihat Keluhan dan Solusi" name="Edit Profile">
                             </form> 
                             <?php
                                 }

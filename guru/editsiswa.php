@@ -1,9 +1,9 @@
 <div class="row">
-    <div class="col-lg-12" style="margin-top:+70px;">
-        <h1 class="page-header">
+    <div class="col-lg-12" style="padding: 0;">
+        <!-- <h1 class="page-header">
             Halaman
             <small>Siswa</small>
-        </h1>
+        </h1> -->
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i>  <a href="inde.php">Dashboard</a>
@@ -18,7 +18,7 @@
 <!-- ISI -->
 <div class="row">
     <div class="col-lg-12">
-        <h3 class="page-header" style="margin-top:-5px;">
+        <h3 class="page-header" style="margin: 0;">
             Edit Data Siswa
         </h3>
     </div>
@@ -102,7 +102,7 @@
 
 <div class="row">
     <div class="col-lg-6">
-        <input style="margin-bottom: 30px;" type="submit" name="save" class="btn btn-default" value="Simpan Edit"/>
+        <input style="margin-bottom: 50px;" type="submit" name="save" class="btn btn-danger" value="SIMPAN EDIT PROFILE"/>
     </div>
     </form>
 

@@ -1,6 +1,6 @@
 <!-- Page Heading -->
 <div class="row">
-    <div class="col-lg-12" style="margin-top:+70px;">
+    <div class="col-lg-12" style="margin: 0;">
         <h1 class="page-header">
             Dashboard Guru
         </h1>

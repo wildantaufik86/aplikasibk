@@ -1,9 +1,9 @@
 <div class="row">
-    <div class="col-lg-12" style="margin-top:+70px;">
-        <h1 class="page-header">
+    <div class="col-lg-12" style="padding: 0;">
+        <!-- <h1 class="page-header">
             Halaman
             <small>Siswa</small>
-        </h1>
+        </h1> -->
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
@@ -18,7 +18,7 @@
 <!-- ISI -->
 <div class="row">
     <div class="col-lg-12">
-        <h3 class="page-header" style="margin-top:-5px;">
+        <h3 class="page-header" style="margin: 0;">
             Edit Data Siswa
         </h3>
     </div>
@@ -28,6 +28,7 @@
     <!-- Sript ambil data -->
     <?php
         $id = $_GET['id'];
+        $data2 = show("SELECT * FROM tb_siswa WHERE id_siswa='$id'");
         $qrykoreksi=mysqli_query($dtb, "SELECT * FROM tb_siswa WHERE id_siswa='$id'");
         $data=mysqli_fetch_object($qrykoreksi);
     ?>
@@ -91,32 +92,16 @@
                 ?>
                 </select>
             </div>
+
             <div class="form-group">
-                <label>Prestasi Siswa 1</label>
-                <input class="form-control" name="prestasi_1" value="<?php echo $data->prestasi_1;?>">
-            </div>
-            <div class="form-group">
-                <label>Prestasi Siswa 2</label>
-                <input class="form-control" name="prestasi_2" value="<?php echo $data->prestasi_2;?>">
-            </div>
-            <div class="form-group">
-                <label>Prestasi Siswa 3</label>
-                <input class="form-control" name="prestasi_3" value="<?php echo $data->prestasi_3;?>">
-            </div>
-            <div class="form-group">
-                <label>Prestasi Siswa 4</label>
-                <input class="form-control" name="prestasi_4" value="<?php echo $data->prestasi_4;?>">
-            </div>
-            <div class="form-group">
-                <label>Prestasi Siswa 5</label>
-                <input class="form-control" name="prestasi_5" value="<?php echo $data->prestasi_5;?>">
+                <p style="color: red;"><i>*Pastikan data yang anda edit telah benar</i></p>
             </div>
         </div>
 </div>
 
 <div class="row">
     <div class="col-lg-6">
-        <input type="submit" name="edit" class="btn btn-default" value="Edit"/>
+        <input style="margin-bottom: 50px; margin-top:5px; width:100%;" type="submit" name="edit" class="btn btn-danger" value="SIMPAN EDIT PROFILE"/>
     </div>
     </form>
 
@@ -132,16 +117,10 @@
         $nama_ortu=strtoupper($_POST['nama_ortu']);
         $no_ortu=strtoupper($_POST['no_ortu']);
         $kelas=strtoupper($_POST['kelas']);
-        $prestasi1=strtoupper($_POST['prestasi_1']);
-        $prestasi2=strtoupper($_POST['prestasi_2']);
-        $prestasi3=strtoupper($_POST['prestasi_3']);
-        $prestasi4=strtoupper($_POST['prestasi_4']);
-        $prestasi5=strtoupper($_POST['prestasi_5']);
         
         $query=mysqli_query($dtb, "UPDATE tb_siswa SET nama_siswa='$nama_siswa', jenis_kelamin='$jenis_kelamin',
                             tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir', alamat='$alamat', agama='$agama',
-                            nama_ortu='$nama_ortu', no_ortu='$no_ortu' ,prestasi_1='$prestasi1', prestasi_2='$prestasi2', prestasi_3='$prestasi3',
-                            prestasi_4='$prestasi4', prestasi_5='$prestasi5', id_kelas='$kelas' WHERE id_siswa='$id'");
+                            nama_ortu='$nama_ortu', no_ortu='$no_ortu' ,id_kelas='$kelas' WHERE id_siswa='$id'");
         
         if($query){
         ?>

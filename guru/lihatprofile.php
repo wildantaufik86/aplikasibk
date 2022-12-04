@@ -1,9 +1,9 @@
 <div class="row">
-    <div class="col-lg-12" style="margin-top:+70px;">
-        <h1 class="page-header">
+    <div class="col-lg-12" style="margin-top: 0;">
+        <!-- <h1 class="page-header">
             Halaman
             <small>Guru</small>
-        </h1>
+        </h1> -->
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i>  <a href="inde.php">Dashboard</a>
@@ -16,9 +16,9 @@
 </div>
 
 <!-- ISI -->
-<div class="row">
-    <div class="col-lg-12">
-        <h3 class="page-header" style="margin-top:-5px;">
+<div class="row" >
+    <div class="col-lg-12" id="header" style="display : flex; align-items : center; justify-content: space-between;">
+        <h3 class="page-header" style="margin:0;">
             Report Data Guru
         </h3>
     </div>
@@ -30,7 +30,7 @@
         <?php   
             $result = mysqli_query($dtb, "SELECT * FROM tb_guru ORDER BY nip ASC");  
         ?>
-        <i><a href="inde.php?page=inputguru">Data Baru Guru</a></i><br><br>
+        
         <div class="table-responsive">
              <table class="table table-hover table-bordered table-striped">
                 <thead>
@@ -55,7 +55,7 @@
                         <td><?php echo $raw['tanggal_lahir']; ?></td>
                         <td><?php echo $raw['alamat']; ?></td>
                         <td><?php echo $raw['agama']; ?></td>
-                        <td><i><a href="?page=editprofile&id=<?php echo $raw['id_guru'];?>">Edit</a> / <a onclick="return confirm('Yakin akan hapus data ini ?')" href="../guru_hapus.php?id=<?php echo $raw['id_guru'];?>">Hapus</a></i></td>
+                        <td><i><a href="?page=editprofile&id=<?php echo $raw['id_guru'];?>">Edit</a></i></td>
                     </tr>
                     <?php
                         }

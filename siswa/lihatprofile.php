@@ -1,15 +1,11 @@
 <div class="row">
-    <div class="col-lg-12" style="margin-top:+70px;">
-        <h1 class="page-header">
-            Halaman
-            <small>Siswa</small>
-        </h1>
+    <div class="col-lg-12" style="margin-top:-10px;">
         <ol class="breadcrumb">
             <li>
                 <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
             </li>
             <li class="active">
-                <i class="fa fa-user"></i> Siswa
+                <i class="fa fa-child"></i> Guru
             </li>
         </ol>
     </div>
@@ -19,70 +15,86 @@
 <div class="row">
     <div class="col-lg-12">
         <h3 class="page-header" style="margin-top:-5px;">
-            Report Profile Siswa
+            Profile Siswa
         </h3>
     </div>
 </div>
 
+
 <div class="row">
     <div class="col-lg-12">
-        <div class="tab-content table-responsive">
-            <?php
-                    $siswa=mysqli_query($dtb, "SELECT tb_pengguna.username, 
-                                                      tb_siswa.nama_siswa,
-                                                      tb_siswa.id_siswa,
-                                                      tb_siswa.nis,
-                                                      tb_siswa.jenis_kelamin,
-                                                      tb_siswa.tempat_lahir,
-                                                      tb_siswa.tanggal_lahir,
-                                                      tb_siswa.alamat,
-                                                      tb_siswa.agama,
-                                                      tb_siswa.nama_ortu,
-                                                      tb_siswa.no_ortu
+        <?php   
+            $guru=mysqli_query($dtb, "SELECT tb_pengguna.username, 
+                                             tb_siswa.id_siswa,
+                                             tb_siswa.nis,
+                                             tb_siswa.nama_siswa,
+                                             tb_siswa.jenis_kelamin,
+                                             tb_siswa.tempat_lahir,
+                                             tb_siswa.tanggal_lahir,
+                                             tb_siswa.alamat,
+                                             tb_siswa.agama,
+                                             tb_siswa.nama_ortu,
+                                             tb_siswa.no_ortu
 
-                                    FROM tb_pengguna, tb_siswa
-                                    WHERE tb_pengguna.id_pengguna='$id_login' AND tb_pengguna.username=tb_siswa.nis");
-                    $jumlah=mysqli_num_rows($siswa);
-            ?>
-            <div class="tab-pane active" id="">
-                <br>
-                <div class="table-responsive">
-                     <table class="table table-hover table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th>NIS</th>
-                                <th>Nama</th>
-                                <th>J Kelamin</th>
-                                <th>Tanggal Lahir</th>
-                                <th>Alamat</th>
-                                <th>Agama</th>
-                                <th>Nama Orang Tua</th>
-                                <th>No Telepon</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                while($row3=mysqli_fetch_array($siswa)){
-                            ?>
-                            <tr>
-                                <td><?php echo $row3['nis']; ?></td>
-                                <td><?php echo $row3['nama_siswa']; ?></td>
-                                <td><?php echo $row3['jenis_kelamin']; ?></td>
-                                <td><?php echo $row3['tanggal_lahir']; ?></td>
-                                <td><?php echo $row3['alamat']; ?></td>
-                                <td><?php echo $row3['agama']; ?></td>
-                                <td><?php echo $row3['nama_ortu']; ?></td>
-                                <td><?php echo $row3['no_ortu']; ?></td>
-                                <td><i><a href="?page=editprofile&id=<?php echo $row3['id_siswa'];?>">Edit</a></i></td>
-                            </tr>
-                            <?php
-                                }
-                            ?>
-                        </tbody>
-                    </table>
+                                        FROM tb_pengguna, tb_siswa
+                                        WHERE tb_pengguna.id_pengguna='$id_login' AND tb_pengguna.username=tb_siswa.nis");  
+        ?>
+                <tbody>
+                    <?php
+                        while($raw=mysqli_fetch_array($guru)){
+                    ?>
+                <div class="form-group">
+                    <label>NIP</label>
+                    <input class="form-control" value=" <?php echo $raw['nis']; ?>" readonly="readonly">
                 </div>
-            </div>
+            
+                <div class="form-group">
+                    <label>Nama</label>
+                    <input class="form-control" value="<?php echo $raw['nama_siswa']; ?>" readonly="readonly">
+                </div>
+
+                <div class="form-group">
+                    <label>Kode Guru</label>
+                    <input class="form-control" value="<?php echo $raw['jenis_kelamin']; ?>" readonly="readonly">
+                </div>
+
+                <div class="form-group">
+                    <label>Tempat Lahir</label>
+                    <input class="form-control" value="<?php echo $raw['tempat_lahir']; ?>" readonly="readonly">
+                </div>
+
+                <div class="form-group">
+                    <label>Tanggal Lahir</label>
+                    <input class="form-control" value="<?php echo $raw['tanggal_lahir']; ?>" readonly="readonly">
+                </div>
+
+                <div class="form-group">
+                    <label>Alamat</label>
+                    <input class="form-control" value="<?php echo $raw['alamat']; ?>" readonly="readonly">
+                </div>
+
+                <div class="form-group">
+                    <label>Agama</label>
+                    <input class="form-control" value="<?php echo $raw['agama']; ?>" readonly="readonly">
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Orang Tua</label>
+                    <input class="form-control" value="<?php echo $raw['nama_ortu']; ?>" readonly="readonly">
+                </div>
+
+                <div class="form-group">
+                    <label>Nomor Hp / Orang Tua</label>
+                    <input class="form-control" value="<?php echo $raw['no_ortu']; ?>" readonly="readonly">
+                </div>
+
+                <form action="?page=editprofile&id=<?php echo $raw['id_siswa'];?>" method="post">
+                <div class="form-group">
+                    <input style="margin-bottom: 50px; margin-top: 5px; width:100%;" class="btn btn-primary" type="submit" value="EDIT PROFILE" name="Edit Profile">
+                </form>
+                    <?php
+                        }
+                    ?>
         </div>
     </div>
 </div>

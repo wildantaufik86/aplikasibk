@@ -48,6 +48,34 @@
             justify-content : center !important;
         }
 
+        @media only screen and (max-width: 600px) {
+        .img-responsive {
+            width : 120px ;
+        }
+
+        h2 {
+            font-size : 24px !important;
+        }
+
+        .deskripsi {
+            text-align : center;
+            margin : 20px 0;
+        }
+
+        header{
+            display : flex;
+            align-items : center;
+        }
+
+        .logo {
+            padding : 0 10px;
+        }
+
+        p {
+            font-size : 15px;
+        }
+      }
+
 
     </style>
 
@@ -121,17 +149,17 @@
             </div>
             <div class="row" style="margin: 20px 0;">
                 <div class="col-lg-6">
-                    <p>Aplikasi ini dibuat untuk memudahkan kinerja dari guru guru BK atau bimbingan koseling untuk mengatur berkas dan kasus yang terjadi di sekolah </p>
+                    <p class="deskripsi">Aplikasi ini dibuat untuk memudahkan kinerja dari guru guru BK atau bimbingan koseling untuk mengatur berkas dan kasus yang terjadi di sekolah </p>
                 </div>
                 <div class="col-lg-6">
-                    <p>Program ini mengandung tiga layanan atau fungsi utama yaitu Akses Profile, Akses absen, dan jadwal kelas. Selain itu, ada 4 pihak yang dapat menjalankan sistem ini yang terdiri dari pihak admin, pihak guru, pihak tata usaha dan siswa / murid</p>
+                    <p class="deskripsi">Program ini mengandung tiga layanan atau fungsi utama yaitu Akses Profile, Akses absen, dan jadwal kelas. Selain itu, ada 4 pihak yang dapat menjalankan sistem ini yang terdiri dari pihak admin, pihak guru, pihak tata usaha dan siswa / murid</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section class="success" id="portfolio" style="height: 100vh;">
+    <section class="success" id="portfolio" style="height: auto;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -150,7 +178,7 @@
                         
                     </a> -->
                     <img src="img/portfolio/jadwal.png" class="img-responsive" alt="">
-                    <h3>Jadwal Kelas</h3>
+                    <h3>Konsultasi</h3>
                 </div>
                 <div class="col-sm-4 portfolio-item">
                     <!-- <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal" style="margin-left:60px;">
@@ -191,7 +219,7 @@
                         <p>Jalan Dr. T. Mansur No.9, Padang Bulan, Kec. Medan Baru, Kota Medan </p>
                         <p>Sumatera Utara 20222</p>
                         <p>Telp. (061) 8211633</p>
-                        <p>Email: info@st3telkom.ac.id</p>
+                        <p>Email: wildantaufik86@gmail.com</p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
@@ -212,7 +240,7 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Ekstra</h3>
-                        <p>Sistem Informasi Manajemen by <br> <a href="#">Wildan Taufik Wibowo Nasution</a>.</p>
+                        <p>This app is Made By <br> <a href="#">Wildan Taufik Wibowo Nasution <br> & <br> Dzaky Dzakwan</a></p>
                     </div>
                 </div>
             </div>

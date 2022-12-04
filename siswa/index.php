@@ -40,6 +40,16 @@
         .table td {
            text-align: center;   
         }
+
+        #navbar, #sidebar {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .navbar-right {
+                display: none;
+            }
+        }
     </style>
 
 </head>
@@ -54,7 +64,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../guru/index.php">SB SISWA</a>
+                <a class="navbar-brand" href="../guru/index.php">AKUN SISWA</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -81,10 +91,9 @@
                     <a> 
                     Pukul <span id="jam"></span>
                     </a>
-
                 </li>
                
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> &nbsp; SISWA <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
@@ -95,31 +104,31 @@
                             <a href="../logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
 
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="../guru/index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="../siswa/index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="?page=lihatprofile"><i class="fa fa-fw fa-user"></i>Profile</a>
                     </li>
                     <li>
-                        <a href="javasript:;" data-toggle="collapse" data-target="#layananbk" ><i class="fa fa-fw fa-bookmark"></i> Layanan BK <i class="fa fa-fw fa-caret-down"></i> </a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#layananbk" ><i class="fa fa-fw fa-bookmark"></i> Layanan BK <i class="fa fa-fw fa-caret-down"></i> </a>
                         <ul id="layananbk" class="collapse">
                         <li>
-                            <a href="?page=informasibk"><i class="fa fa-fw fa-hand-o-left"></i> Lihat Informasi BK</a>
-                        </li>
-                        <li>
-                            <a href="?page=lihatjadwalkonseling"><i class="fa fa-fw fa-hand-o-left"></i> Lihat Jadwal Konseling</a>
+                            <a href="?page=lihatkeluhan"><i class="fa fa-fw fa-hand-o-left"></i> Lihat Keluhan dan Solusi</a>
                         </li>
                         <li>
                             <a href="?page=lihatprofile2"><i class="fa fa-fw fa-hand-o-left"></i> Konsultasi BK</a>
                         </li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="../logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                     </li>
                     
             </div>
@@ -157,6 +166,12 @@
                 include"lihatjadwalkonseling.php";
                 } else if(@$_GET['page']=='lihatprofile2'){
                 include"lihatprofile2.php";
+                } else if(@$_GET['page']=='lihatkeluhan'){
+                include"keluhan.php";
+                } else if(@$_GET['page']=='cekkeluhan'){
+                include"cekkeluhan.php";
+                } else if(@$_GET['page']=='cekkeluhan2'){
+                include"cekkeluhan2.php";
                 }
                 ?>
 
